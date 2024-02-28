@@ -28,14 +28,23 @@ nav>a {
 }
 
 
-main{
+main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-
-    align-items: center;
+    grid-auto-flow: column;
+    gap: 80px;
+    /* width: 90vw; */
+    align-items: start;
     justify-content: center;
+
+    @media screen and (max-width: 720px) {
+        /* background-color: yellow; */
+        grid-auto-flow: row;
+    }
 }
 
+#contact_location{
+    justify-self: end;
+}
 
 footer {
     display: grid;
